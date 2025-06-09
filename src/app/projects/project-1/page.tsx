@@ -62,7 +62,7 @@ export default function Project1Page() {
           <div className="mb-10">
             <h2 className="text-2xl font-medium mb-4">Tech Stack:</h2>
             <ul className="flex flex-wrap gap-3">
-              {project.Skills.map((skill, idx) => (
+              {project.skills.map((skill, idx) => (
                 <li
                   key={idx}
                   className="bg-gray-800 px-3 py-1 rounded text-sm text-white"
