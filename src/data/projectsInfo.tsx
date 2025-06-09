@@ -17,7 +17,7 @@ export const projectsInfo: ProjectInfo[] = [
     description:
       "A Streamlit app that predicts insurance premiums using machine learning and exploratory data analysis techniques.",
     image: "/uploads/HealthCoverageProjection.png",
-    gitLink: "https://github.com/Saivarun4440/HealthCoverageProjection",
+    gitLink: "https://github.com/Saivarun4440/Health-Coverage-Projection",
     liveLink: "", // Add deployment link if available
     skills: ["Python", "Streamlit", "Machine Learning"],
   },
@@ -27,7 +27,7 @@ export const projectsInfo: ProjectInfo[] = [
     description:
       "A content-based recommender system built with Spotify API and Streamlit for personalized music suggestions.",
     image: "/uploads/MusicRecommendationSystem.png",
-    gitLink: "https://github.com/Saivarun4440/MusicRecommendationSystem",
+    gitLink: "https://github.com/Saivarun4440/Music-Recommendation-System",
     liveLink: "", // Add deployment link if available
     skills: ["Python", "Streamlit", "Spotify API"],
   },
@@ -37,7 +37,7 @@ export const projectsInfo: ProjectInfo[] = [
     description:
       "An interactive dashboard analyzing car brand performance across India using Tableau and Excel data sources.",
     image: "/uploads/AutomotiveScenarioDashboard.png",
-    gitLink: "https://github.com/Saivarun4440/AutomotiveScenarioDashboard",
+    gitLink: "https://github.com/Saivarun4440/Decoding-the-Automotive-Scenario-in-India",
     liveLink: "", // Add Tableau public link if published
     skills: ["Tableau", "Excel", "SQL"],
   },
@@ -47,7 +47,7 @@ export const projectsInfo: ProjectInfo[] = [
     description:
       "This website you're browsing! A responsive and fast developer portfolio built with Next.js and TailwindCSS.",
     image: "/uploads/PortfolioImage.png",
-    gitLink: "https://github.com/Saivarun4440/portfolio", // replace with your actual portfolio repo
+    gitLink: "https://github.com/Saivarun4440/saivarun-portfolio", // replace with your actual portfolio repo
     liveLink: "https://saivarun-portfolio.vercel.app/",
     skills: ["Next.js", "React", "TailwindCSS", "TypeScript"],
   },
