@@ -3,6 +3,7 @@ import { Navbar } from "@/components/ui/navbar";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+// @ts-ignore
 import MyResume from "../../../public/uploads/MyResume.png";
 import { Download } from "lucide-react"; // icon
 
@@ -22,9 +23,8 @@ export default function WorkPage() {
             My Experience
           </h2>
           <p className="text-white/60 mb-2">
-            I am a Full-stack developer with 3+ years of experience building
-            scalable microservices, APIs, and responsive UIs using Java, Spring,
-            and modern JavaScript frameworks.
+            I’m a Data Analyst with over 3 years of experience working across business intelligence, data engineering, and analytics. 
+            I specialize in SQL, Python, Power BI, Tableau, Excel, and building scalable ETL pipelines using AWS Glue and Lambda.
           </p>
           <div className="mt-10">
             <h2 className="text-xl md:text-xl font-medium mb-3">
@@ -34,7 +34,7 @@ export default function WorkPage() {
             <ul className="flex space-x-6 items-center mb-6">
               <li className="relative group flex justify-center">
                 <a
-                  href="https://github.com/saivenkat98/"
+                  href="https://github.com/Saivarun4440"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -50,7 +50,7 @@ export default function WorkPage() {
               </li>
               <li className="relative group flex justify-center">
                 <a
-                  href="https://www.linkedin.com/in/sai-venkat-kumar-rapol-897895159/"
+                  href="https://www.linkedin.com/in/saivarun-gandla/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
