@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio — a carefully crafted digital space that introduces me, showcases my work, and provides a seamless way to get in touch. Built with **Next.js**, **TypeScript**, and **React**, and animated with **Framer Motion**, this site is clean, fast, and dynamic — reflecting both my personality and development approach.
 
-🌐 [Live Site](https://sai-venkat.vercel.app/)
+🌐 [Live Site](https://saivarun-portfolio.vercel.app/)
 
 ---
 
