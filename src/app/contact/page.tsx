@@ -59,11 +59,11 @@ export default function ContactPage() {
               <div className="space-y-4 mb-8">
                 <div>
                   <h3 className="text-lg font-medium mb-1">Email</h3>
-                  <p className="text-white/60">rapol.svk@gmail.com</p>
+                  <p className="text-white/60">saivarun0444@gmail.com</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Phone</h3>
-                  <p className="text-white/60">+1 (470) 908-3113</p>
+                  <p className="text-white/60">+1 (704) 369-4168</p>
                 </div>
               </div>
             </div>

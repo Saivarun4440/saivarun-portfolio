@@ -3,7 +3,8 @@
 import { Navbar } from "@/components/ui/navbar";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import AboutMeImage from "../../public/uploads/AboutMeImage.jpeg";
+// Use the image path as a string since public assets are served from the root in Next.js
+const AboutMeImage = "/uploads/AboutMeImage.jpeg";
 
 export default function AboutPage() {
   return (
@@ -28,21 +29,25 @@ export default function AboutPage() {
             {/* TEXT — appears first on mobile */}
             <div className="order-2 md:order-1">
               <h2 className="text-2xl font-medium mb-6">
-                Hey there! I'm Sai Venkat — Software Developer
+                Hey there! I'm Saivarun Gandla — Data Analyst & BI Specialist
               </h2>
               <p className="text-white/80 mb-4">
-              I'm passionate about building systems that excel — scalable microservices,
-              robust APIs, and responsive UIs — and breaking the ones that don't.
-              Whether it's engineering clean <span className="font-semibold italic"> Java + Spring backends</span> or taming frontend chaos
-              with <span className="font-semibold italic">modern JavaScript frameworks</span>, I thrive in turning complexity into clarity.
+               I'm a <span className="font-semibold italic">data-driven analyst</span> with 3+ years of experience
+              turning business data into actionable insights. I specialize in
+              <span className="font-semibold italic"> SQL, Python, and Power BI</span>, and love creating scalable ETL
+              pipelines using <span className="font-semibold italic">AWS Glue and Lambda</span>.
               </p>
               <p className="text-white/80 mb-4">
-              Always curious and committed, I'm constantly looking for challenges that stretch my
-              problem-solving muscles and deepen <span className="font-semibold italic"> full-stack expertise</span>. If you're in search of
-              a collaborative engineer who loves getting into the thick of code and shipping
-              impactful solutions — let's connect!
+               My passion lies in building <span className="font-semibold italic">insightful dashboards</span>,
+              optimizing reporting workflows, and enabling teams to make better, faster decisions.
+              Whether it's structuring raw data or visualizing trends, I bring clarity through analytics.
               </p>
-
+              <p className="text-white/80 mb-4">
+              I'm always looking for new challenges that push my skills in
+              <span className="font-semibold italic"> business intelligence and data engineering</span>.
+              If you're looking for a collaborative analyst who can bridge
+              data and strategy — <span className="font-semibold italic">let's connect!</span>
+              </p>
               <div className="mt-10">
                 <h3 className="text-2xl font-medium mb-6">
                   Follow My Work Here
@@ -50,7 +55,7 @@ export default function AboutPage() {
                 <ul className="flex space-x-6 items-center">
                   <li className="relative group flex justify-center">
                     <a
-                      href="https://github.com/saivenkat98/"
+                      href="https://github.com/Saivarun4440/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -66,7 +71,7 @@ export default function AboutPage() {
                   </li>
                   <li className="relative group flex justify-center">
                     <a
-                      href="https://www.linkedin.com/in/sai-venkat-kumar-rapol-897895159/"
+                      href="https://www.linkedin.com/in/saivarun-gandla/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -89,37 +94,27 @@ export default function AboutPage() {
           <div className="mb-20">
             <h2 className="text-2xl font-medium mb-6">Skills</h2>
             <ul className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-9 gap-5">
-              {[
-                { name: "Java", icon: "java/java-original-wordmark.svg" },
-                { name: "Python", icon: "python/python-original-wordmark.svg" },
-                {
-                  name: "JavaScript",
-                  icon: "javascript/javascript-original.svg",
-                },
-                { name: "React", icon: "react/react-original.svg" },
-                {
-                  name: "Node.js",
-                  icon: "nodejs/nodejs-original-wordmark.svg",
-                },
-                { name: "Next.js", icon: "nextjs/nextjs-original.svg" },
-                { name: "MySQL", icon: "mysql/mysql-original-wordmark.svg" },
-                {
-                  name: "MongoDB",
-                  icon: "mongodb/mongodb-original-wordmark.svg",
-                },
-                { name: "Git", icon: "git/git-original-wordmark.svg" },
-              ].map(({ name, icon }, i) => (
-                <li key={i} className="relative group flex justify-center">
-                  <img
-                    className="w-[50px] h-[50px] transition-transform duration-300 ease-in-out transform group-hover:scale-110"
-                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`}
-                    alt={`${name} Icon`}
-                  />
-                  <span className="absolute bottom-[-1.5rem] text-xs text-white bg-gray-800 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
-                    {name}
-                  </span>
-                </li>
-              ))}
+{[
+  { name: "Python", icon: "python/python-original-wordmark.svg" },
+  { name: "SQL", icon: "mysql/mysql-original-wordmark.svg" },
+  { name: "Power BI", icon: "/uploads/powerbi.svg" },
+  { name: "Tableau", icon: "/uploads/tableau.svg" },
+  { name: "AWS", icon: "/uploads/aws.svg" },
+  { name: "ETL", icon: "/uploads/etl.svg" }, // placeholder
+  { name: "Excel", icon: "/uploads/excel.svg" },
+  { name: "Git", icon: "git/git-original-wordmark.svg" },
+].map(({ name, icon }, i) => (
+  <li key={i} className="relative group flex justify-center">
+    <img
+      className="w-[50px] h-[50px] transition-transform duration-300 ease-in-out transform group-hover:scale-110"
+      src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`}
+      alt={`${name} Icon`}
+    />
+    <span className="absolute bottom-[-1.5rem] text-xs text-white bg-gray-800 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+      {name}
+    </span>
+  </li>
+))}
             </ul>
           </div>
         </div>
