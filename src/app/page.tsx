@@ -97,11 +97,11 @@ export default function AboutPage() {
 {[
    { name: "Python", icon: "python/python-original-wordmark.svg" }, 
     { name: "SQL", icon: "mysql/mysql-original-wordmark.svg" },     
-    { name: "Power BI", icon: "https://raw.githubusercontent.com/Saivarun4440/portfolio-icons/main/icons/powerbi.svg" },
-    { name: "Tableau", icon: "https://raw.githubusercontent.com/Saivarun4440/portfolio-icons/main/icons/tableau.svg" },
-    { name: "AWS", icon: "https://raw.githubusercontent.com/Saivarun4440/portfolio-icons/main/icons/aws.svg" },
-    { name: "ETL", icon: "https://raw.githubusercontent.com/Saivarun4440/portfolio-icons/main/icons/etl.svg" },
-    { name: "Excel", icon: "https://raw.githubusercontent.com/Saivarun4440/portfolio-icons/main/icons/excel.svg" },
+    { name: "Power BI", icon: "/uploads/powerbi.png" },
+    { name: "Tableau", icon: "/uploads/tableau.png" },
+    { name: "AWS", icon: "/uploads/aws.png" },
+    { name: "ETL", icon: "/uploads/etl.png" },
+    { name: "Excel", icon: "/uploads/excel.png" },
     { name: "Git", icon: "git/git-original-wordmark.svg" },
 ].map(({ name, icon }, i) => (
   <li key={i} className="relative group flex justify-center">
