@@ -6,7 +6,6 @@ import { Navbar } from "@/components/ui/navbar";
 import { portfolioProjects } from "@/data/portfolio";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import MyResume from "../../../../public/uploads/MyResume.png";
 import Link from "next/link";
 
 export default function Project1Page() {
@@ -24,13 +23,22 @@ export default function Project1Page() {
       >
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-medium mb-8">My Resume</h1>
-          <p className="text-white/60 mb-4">learn more about me!</p>
+          <p className="text-white/60 mb-4">Learn more about me!</p>
 
+          {/* ✅ Display Resume PNG directly from public/uploads */}
           <div className="aspect-video rounded-xl overflow-y mb-12">
-          <div>
-              <Image src={MyResume} alt="About Me" className="rounded-xl" />
+            <div>
+              <Image
+                src="/uploads/MyResume.png"
+                alt="About Me"
+                width={1000}
+                height={1400}
+                className="rounded-xl w-full h-auto"
+              />
             </div>
           </div>
+
+          {/* Back Link */}
           <div className="border-t border-white/10 pt-8 mb-20">
             <Link
               href="/about"
