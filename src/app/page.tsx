@@ -90,38 +90,41 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* SKILLS SECTION */}
-          <div className="mb-20">
-            <h2 className="text-2xl font-medium mb-6">Skills</h2>
-            <ul className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-9 gap-5">
-{[
-   { name: "Python", icon: "python/python-original-wordmark.svg" }, 
-    { name: "SQL", icon: "mysql/mysql-original-wordmark.svg" },     
-    { name: "Power BI", icon: "/uploads/powerbi.png" },
-    { name: "Tableau", icon: "/uploads/tableau.png" },
-    { name: "AWS", icon: "/uploads/aws.png" },
-    { name: "ETL", icon: "/uploads/etl.png" },
-    { name: "Excel", icon: "/uploads/excel.png" },
-    { name: "Git", icon: "git/git-original-wordmark.svg" },
-].map(({ name, icon }, i) => (
-  <li key={i} className="relative group flex justify-center">
-    <img
-      className="w-[50px] h-[50px] transition-transform duration-300 ease-in-out transform group-hover:scale-110"
-      src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}`}
-      alt={`${name} Icon`}
-    />
-    <span className="absolute bottom-[-1.5rem] text-xs text-white bg-gray-800 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
-      {name}
-    </span>
-  </li>
-))}
-            </ul>
-          </div>
-        </div>
-      </motion.div>
-    </main>
-  );
-}
+      {/* SKILLS SECTION */}
+<div className="mb-20">
+  <h2 className="text-2xl font-medium mb-6">Skills</h2>
+  <ul className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-9 gap-5">
+    {[
+      { name: "Python", icon: "python/python-original-wordmark.svg" },
+      { name: "SQL", icon: "mysql/mysql-original-wordmark.svg" },
+      { name: "Power BI", icon: "/uploads/powerbi.png" },
+      { name: "Tableau", icon: "/uploads/tableau.png" },
+      { name: "AWS", icon: "/uploads/aws.png" },
+      { name: "ETL", icon: "/uploads/etl.png" },
+      { name: "Excel", icon: "/uploads/excel.png" },
+      { name: "Git", icon: "git/git-original-wordmark.svg" },
+    ].map(({ name, icon }, i) => (
+      <li key={i} className="relative group flex justify-center">
+        <img
+          className="w-[50px] h-[50px] transition-transform duration-300 ease-in-out transform group-hover:scale-110"
+          src={
+            icon.startsWith("/uploads/")
+              ? icon // Local image
+              : `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}` // CDN icon
+          }
+          alt={`${name} Icon`}
+        />
+        <span className="absolute bottom-[-1.5rem] text-xs text-white bg-gray-800 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+          {name}
+        </span>
+      </li>
+    ))}
+  </ul>
+</div>
+
+    </div>
+  </motion.div>
+</main>
 
 // IGNORE THIS BELOW CODE; IN PLACE FOR FUTURE UPGRADES TO THE WEBSITE
 
