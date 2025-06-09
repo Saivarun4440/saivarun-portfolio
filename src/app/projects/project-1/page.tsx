@@ -1,15 +1,15 @@
-// IGNORE THIS FILE; IN PLACE FOR FUTURE UPGRADES TO THE WEBSITE
-
 "use client";
 
-import { Navbar } from "@/components/ui/navbar";
-import { portfolioProjects } from "@/data/portfolio";
+import { Navbar } from "../../../components/ui/navbar";
+import { projectsInfo } from "../../../data/projectsInfo";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function Project1Page() {
-  const project = portfolioProjects.find(p => p.slug === "project-1") || portfolioProjects[0];
+  // Replace 'project-1' with the slug/title of your first project, e.g., "Automotive Visualization Dashboard"
+  const project = projectsInfo[0];
 
   return (
     <main className="min-h-screen">
@@ -22,26 +22,61 @@ export default function Project1Page() {
         className="container mx-auto pt-32 px-6"
       >
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-medium mb-8">My Resume</h1>
-          <p className="text-white/60 mb-4">Learn more about me!</p>
+          <h1 className="text-4xl md:text-6xl font-medium mb-8">{project.title}</h1>
+          <p className="text-white/60 mb-4">{project.description}</p>
 
-          {/* ✅ Display Resume PNG directly from public/uploads */}
-          <div className="aspect-video rounded-xl overflow-y mb-12">
-            <div>
-              <Image
-                src="/uploads/MyResume.png"
-                alt="About Me"
-                width={1000}
-                height={1400}
-                className="rounded-xl w-full h-auto"
-              />
-            </div>
+          {/* Project Image */}
+          <div className="rounded-xl overflow-hidden mb-10">
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={1000}
+              height={600}
+              className="rounded-xl w-full h-auto"
+            />
+          </div>
+
+          {/* GitHub and Live Links */}
+          <div className="flex space-x-6 mb-10">
+            <a
+              href={project.gitLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-700 font-medium"
+            >
+              GitHub Repo
+            </a>
+            {project.liveLink && (
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-500 hover:text-green-700 font-medium"
+              >
+                Live Demo
+              </a>
+            )}
+          </div>
+
+          {/* Skills */}
+          <div className="mb-10">
+            <h2 className="text-2xl font-medium mb-4">Tech Stack:</h2>
+            <ul className="flex flex-wrap gap-3">
+              {project.Skills.map((skill, idx) => (
+                <li
+                  key={idx}
+                  className="bg-gray-800 px-3 py-1 rounded text-sm text-white"
+                >
+                  {skill}
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Back Link */}
           <div className="border-t border-white/10 pt-8 mb-20">
             <Link
-              href="/about"
+              href="/projects"
               className="inline-flex items-center text-white hover:text-white/70 transition-colors"
             >
               <svg
@@ -56,7 +91,7 @@ export default function Project1Page() {
                   clipRule="evenodd"
                 />
               </svg>
-              Back to Portfolio
+              Back to Projects
             </Link>
           </div>
         </div>
