@@ -1,11 +1,10 @@
 "use client";
+
 import { Navbar } from "@/components/ui/navbar";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Download } from "lucide-react";
 import Image from "next/image";
-// @ts-ignore
-import MyResume from "../../../public/uploads/MyResume.png";
-import { Download } from "lucide-react"; // icon
 
 export default function WorkPage() {
   return (
@@ -19,33 +18,32 @@ export default function WorkPage() {
         className="container mx-auto pt-32 px-6"
       >
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-medium mb-3">
-            My Experience
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-3">My Experience</h2>
           <p className="text-white/60 mb-2">
-            I’m a Data Analyst with over 3 years of experience working across business intelligence, data engineering, and analytics. 
-            I specialize in SQL, Python, Power BI, Tableau, Excel, and building scalable ETL pipelines using AWS Glue and Lambda.
+            I'm a Data Analyst and BI Developer with 3+ years of experience working with SQL, Python, Power BI, Tableau, 
+            and cloud tools like AWS to drive actionable insights, build automated pipelines, and enable strategic decisions.
           </p>
-          <div className="mt-10">
-            <h2 className="text-xl md:text-xl font-medium mb-3">
-              Follow My Work Here
-            </h2>
 
+          {/* Work Links */}
+          <div className="mt-10">
+            <h2 className="text-xl md:text-xl font-medium mb-3">Follow My Work Here</h2>
             <ul className="flex space-x-6 items-center mb-6">
               <li className="relative group flex justify-center">
                 <a
-                  href="https://github.com/Saivarun4440"
+                  href="https://github.com/Saivarun4440/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img
-                    className="w-[40px] h-[40px] transition-transform duration-300 ease-in-out transform group-hover:scale-110"
+                  <Image
+                    width={40}
+                    height={40}
                     src="/uploads/GitHubIcon.png"
                     alt="GitHub Icon"
+                    className="transition-transform duration-300 ease-in-out transform group-hover:scale-110"
                   />
                   <span className="absolute bottom-[-2.1rem] text-xs text-white bg-gray-800 px-3 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
-                        Click me!
-                      </span>
+                    Click me!
+                  </span>
                 </a>
               </li>
               <li className="relative group flex justify-center">
@@ -54,20 +52,22 @@ export default function WorkPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img
-                    className="w-[40px] h-[40px] transition-transform duration-300 ease-in-out transform group-hover:scale-110"
+                  <Image
+                    width={40}
+                    height={40}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
                     alt="LinkedIn Icon"
+                    className="transition-transform duration-300 ease-in-out transform group-hover:scale-110"
                   />
                   <span className="absolute bottom-[-2.1rem] text-xs text-white bg-gray-800 px-3 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
-                        Click me!
-                      </span>
+                    Click me!
+                  </span>
                 </a>
               </li>
             </ul>
-            <br/>
-            {/* Move the download button below */}
-            <div className="flex justify-start mb-1">
+
+            {/* Resume Download Link */}
+            <div className="flex justify-start mb-6">
               <a
                 href="/uploads/myDocument.pdf"
                 download
@@ -79,12 +79,25 @@ export default function WorkPage() {
             </div>
           </div>
 
-          <div className="aspect-video rounded-xl overflow-y mb-12">
-            <div>
-              <Image src={MyResume} alt="About Me" className="rounded-xl" />
-            </div>
+          {/* Resume Images Section */}
+          <div className="grid gap-8 mb-12">
+            <Image
+              src="/uploads/resume-page1.png"
+              alt="Resume Page 1"
+              width={1200}
+              height={1600}
+              className="rounded-xl w-full"
+            />
+            <Image
+              src="/uploads/resume-page2.png"
+              alt="Resume Page 2"
+              width={1200}
+              height={1600}
+              className="rounded-xl w-full"
+            />
           </div>
-          <br />
+
+          {/* Back Link */}
           <div className="border-t border-white/10 pt-8 mb-20">
             <Link
               href="/"
